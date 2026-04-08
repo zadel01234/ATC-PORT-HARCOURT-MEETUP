@@ -13,7 +13,7 @@ const tracks = [
   {
     title: "Become a Volunteer",
     desc: "Join the engine room. Shape the experience, build your network, and gain behind-the-scenes access to the meetup.",
-    img: "/DSC_0832.JPG",
+    img: "/DSC_0832.jpg",
     btn: "Apply to Volunteer",
     link: "https://docs.google.com/forms",
     featured: true,
@@ -56,6 +56,7 @@ export default function Involve() {
               <img
                 src={track.img}
                 alt={track.title}
+                loading='lazy'
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
             </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const carouselImages = [
-  { src: "/DSC_0832.JPG", alt: "ATC Meetup event" },
+  { src: "/DSC_0832.jpg", alt: "ATC Meetup event" },
   { src: "/DSC_1156.jpg", alt: "ATC community gathering" },
   { src: "/DSC_1159.jpg", alt: "Tech enthusiasts at ATC" },
   { src: "/I89A0001.jpg", alt: "ATC Port Harcourt meetup" },
@@ -40,6 +40,7 @@ function HeroCarousel() {
           key={`prev-${prev}`}
           src={carouselImages[prev].src}
           alt={carouselImages[prev].alt}
+          loading='lazy'
           className="absolute inset-0 w-full h-full object-cover"
           style={{ zIndex: 1 }}
         />

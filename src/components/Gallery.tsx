@@ -117,7 +117,8 @@ export default function Gallery() {
                   {/* Image fills the entire card absolutely */}
                   <img
                     src={event.img}
-                    alt={event.title}
+                        alt={event.title}
+                        loading='lazy'
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
 

@@ -53,6 +53,7 @@ export default function About() {
             <img
               src="/previousmeetlagos.jpg"
               alt="Tech ecosystem gathering"
+              loading='lazy'
               className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
@@ -75,6 +76,7 @@ export default function About() {
           <img
             src="/previousmeetibadan.jpg"
             alt="Our Mission"
+            loading='lazy'
             className="w-full aspect-[16/9] object-cover rounded-xl transition-all duration-700 group-hover:scale-105"
           />
           {/* Hover overlay animation */}
@@ -104,6 +106,7 @@ export default function About() {
           <img
             src="/previousmeetabuja.jpg"
             alt="Our Vision"
+            loading='lazy'
             className="w-full aspect-[16/9] object-cover rounded-xl transition-all duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 rounded-xl border-2 border-primary/0 group-hover:border-primary/40 transition-all duration-500 pointer-events-none" />
