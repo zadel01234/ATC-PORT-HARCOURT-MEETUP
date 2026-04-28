@@ -7,7 +7,7 @@ const tracks = [
     desc: "Align your brand with Africa's fastest-growing tech Community. Gain exclusive access to top-tier talent and innovation leaders.",
     img: "/DSC_1156.jpg",
     btn: "Apply to Sponsor",
-    link: "http://meetup.atcafrica.com/becomeasponsor",
+    link: "https://drive.google.com/file/d/1WUCErMyao1Xxw9YfajUbqLKam91RfLvB/view?usp=drive_link",
     featured: false,
   },
   {
@@ -15,7 +15,7 @@ const tracks = [
     desc: "Join the engine room. Shape the experience, build your network, and gain behind-the-scenes access to the meetup.",
     img: "/DSC_0832.jpg",
     btn: "Apply to Volunteer",
-    link: "https://docs.google.com/forms",
+    link: "https://bit.ly/callforvolunteerptm",
     featured: true,
   },
   {

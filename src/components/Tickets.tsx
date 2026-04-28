@@ -189,7 +189,7 @@ export default function Tickets() {
           >
             <CalendarCheck size={52} className="mb-4 sm:mb-6" />
             <h3 className="font-headline text-xl sm:text-2xl font-bold mb-2">Save the Date</h3>
-            <p className="opacity-80 font-medium text-sm sm:text-base">July 12th, 2025</p>
+            <p className="opacity-80 font-medium text-sm sm:text-base">July 11th, 2026</p>
             <p className="opacity-60 text-xs mt-1">9:00 AM WAT</p>
           </motion.div>
         </div>

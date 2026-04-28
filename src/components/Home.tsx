@@ -80,7 +80,7 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary font-bold text-xs sm:text-sm mb-6 uppercase tracking-widest">
               <Calendar size={14} />
-              12th July, 2025 • 9AM WAT
+              11th July, 2025 • 9AM WAT
             </div>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-on-surface editorial-text leading-[0.9] mb-6 sm:mb-8">
               Level <span className="text-primary">Up</span>
@@ -315,6 +315,52 @@ export default function Home() {
           </div>
           <div className="absolute -top-24 -left-24 w-64 h-64 border-[32px] border-white/10 rounded-full pointer-events-none" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 border-[48px] border-white/5 rounded-full pointer-events-none" />
+        </motion.div>
+      </section>
+
+      {/* ── Speak at ATC CTA ── */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-primary px-10 py-14 sm:px-16 sm:py-20 md:px-20"
+        >
+          {/* Decorative rings */}
+          <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full border-[32px] border-white/10" />
+          <div className="pointer-events-none absolute -bottom-16 -right-16 h-80 w-80 rounded-full border-[40px] border-white/5" />
+
+          <div className="relative z-10 flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+            {/* Copy */}
+            <div className="max-w-xl">
+              <h2 className="editorial-text mb-4 text-3xl font-black text-on-primary sm:text-4xl md:text-5xl">
+                Want to volunteer?
+              </h2>
+              <p className="text-base leading-relaxed text-on-primary/75 sm:text-lg">
+                Join the engine room. Shape the experience, build your network, and gain behind-the-scenes access to the meetup.
+              </p>
+            </div>
+
+            {/* Actions */}
+            <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+              <a
+                href="https://bit.ly/callforvolunteerptm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-surface px-8 py-4 text-base font-black text-primary shadow-xl transition-all hover:scale-105 active:scale-95"
+              >
+                Apply to volunteer
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <Link
+                to="/involve"
+                className="inline-flex items-center justify-center rounded-full border-2 border-on-primary/30 px-8 py-4 text-base font-bold text-on-primary transition-colors hover:bg-white/10"
+              >
+                Become a Sponsor
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </section>
     </div>

@@ -32,7 +32,7 @@ export default function Footer() {
             </a>
             <a
               className="text-on-surface hover:text-primary transition-colors text-sm"
-              href="http://meetup.atcafrica.com/becomeasponsor"
+              href="https://drive.google.com/file/d/1WUCErMyao1Xxw9YfajUbqLKam91RfLvB/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
