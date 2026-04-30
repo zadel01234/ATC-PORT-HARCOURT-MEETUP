@@ -152,7 +152,7 @@ export default function Gallery() {
         </blockquote>
         <div className="mt-6 sm:mt-8 flex items-center justify-center gap-4">
           <div className="w-8 sm:w-12 h-[1px] bg-outline-variant" />
-          <cite className="not-italic font-headline font-bold text-primary text-sm sm:text-base">ATC Africa Curators</cite>
+          <cite className="not-italic font-headline font-bold text-primary text-sm sm:text-base">ATC Africa</cite>
           <div className="w-8 sm:w-12 h-[1px] bg-outline-variant" />
         </div>
       </section>
