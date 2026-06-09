@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Calendar, Mic, ArrowRight, MessagesSquare, Brain, Users } from "lucide-react";
+import { Calendar, MapPin, Mic, ArrowRight, MessagesSquare, Brain, Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -69,6 +69,8 @@ export default function Home() {
 
   return (
     <div className="pt-16">
+  
+
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-surface px-4 sm:px-6 md:px-12 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
@@ -78,9 +80,15 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="md:col-span-7 z-10"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary font-bold text-xs sm:text-sm mb-6 uppercase tracking-widest">
-              <Calendar size={14} />
-              11th July, 2025 • 9AM WAT
+            <div className="flex flex-col items-start gap-3 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-primary font-bold text-xs sm:text-sm uppercase tracking-widest">
+                <Calendar size={14} />
+                11th July, 2025 • 9AM WAT
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-bold text-xs sm:text-sm uppercase tracking-widest">
+                <MapPin size={14} />
+                The HiveCreative Hub, Choba, PH
+              </div>
             </div>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-on-surface editorial-text leading-[0.9] mb-6 sm:mb-8">
               Level <span className="text-primary">Up</span>
@@ -91,34 +99,34 @@ export default function Home() {
               A gathering of tech enthusiasts in Port Harcourt, creating a welcoming space to learn, connect, and curate the future of innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://flutterwave.com/pay/meetup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-on-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-extrabold shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center"
-              >
-                Register Now
-              </a>
-              <button
-                onClick={() => navigate("/gallery")}
-                className="border border-outline-variant/30 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:bg-surface-container transition-colors"
-              >
-                View Gallery
-              </button>
-            </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1, rotate: 2 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="md:col-span-5 relative"
-          >
-            <HeroCarousel />
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-container rounded-2xl -z-10 -rotate-12 opacity-40 blur-2xl pointer-events-none" />
-          </motion.div>
+            <a href="https://flutterwave.com/pay/meetup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-on-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-extrabold shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center"
+              >
+              Get Ticket
+            </a>
+            <button
+              onClick={() => navigate("/gallery")}
+              className="border border-outline-variant/30 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-base sm:text-lg font-bold hover:bg-surface-container transition-colors"
+            >
+              View Past Events
+            </button>
         </div>
-      </section>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.92 }}
+        animate={{ opacity: 1, scale: 1, rotate: 2 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="md:col-span-5 relative"
+      >
+        <HeroCarousel />
+        <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-container rounded-2xl -z-10 -rotate-12 opacity-40 blur-2xl pointer-events-none" />
+      </motion.div>
+    </div>
+      </section >
 
       {/* Intro Section
       <section className="bg-surface-container-low py-20 sm:py-24 px-4 sm:px-6">
@@ -237,6 +245,8 @@ export default function Home() {
 
       
 
+
+
       {/* Partners Section */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0d0d0d]">
         <div className="max-w-7xl mx-auto">
@@ -261,32 +271,45 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl sm:rounded-3xl border border-white/8 bg-white/[0.03] overflow-hidden"
+            className="rounded-2xl sm:rounded-3xl border border-white/8 bg-white/[0.03] overflow-hidden py-12 sm:py-16"
           >
-            <div className="flex flex-col items-center justify-center md:flex-row md:items-stretch min-h-[280px]">
-
-              {/* Left column: placeholder logo grid
-              <div className="md:w-1/2 border-b md:border-b-0 md:border-r border-white/8 p-10 sm:p-14 flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-3 w-full max-w-xs">
-                  {[...Array(6)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="aspect-square rounded-xl border border-white/10 bg-white/5 flex items-center justify-center"
-                      style={{ opacity: 0.3 + (i % 3) * 0.2 }}
-                    >
-                      <div className="w-1/3 h-1/3 rounded-sm bg-white/20" />
-                    </div>
-                  ))}
-                </div>
-              </div> */}
-
-              {/* Right column: coming soon — fully centered */}
-              <div className="md:w-1/2 p-10 sm:p-14 flex items-center justify-center">
-                <p className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-snug text-center">
-                  <span className="text-primary-container">Coming Soon</span>
-                </p>
-              </div>
-
+            {/* Marquee track */}
+            <div
+              className="overflow-hidden w-full"
+              style={{
+                WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+                maskImage: "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+              }}
+            >
+              <motion.div
+                className="flex items-center gap-16 sm:gap-24 w-max"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ duration: 18, ease: "linear", repeat: Infinity }}
+              >
+                {/* Duplicate the list twice for seamless loop */}
+                {[...Array(2)].map((_, pass) => (
+                  <div key={pass} className="flex items-center gap-16 sm:gap-24">
+                    {[
+                      { src: "/partners/DSN.jpeg", alt: "DSN" },
+                      { src: "/partners/Hive.png", alt: "The Hive" },
+                      { src: "/partners/images.png", alt: "Techeconomy" },
+                      { src: "/partners/pody.jpg", alt: "Pody" },
+                      { src: "/partners/Talenxify.png", alt: "Talenxify" },
+                    ].map((logo) => (
+                      <div
+                        key={logo.alt}
+                        className="shrink-0 h-20 sm:h-12 flex items-center justify-center opacity-100 hover:opacity-150 transition-opacity duration-300"
+                      >
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="h-full w-auto object-contain "
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </motion.div>
 

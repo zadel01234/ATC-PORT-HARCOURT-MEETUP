@@ -23,7 +23,7 @@ export default function Navbar() {
     { to: "/speakers", label: "Speakers" },
     { to: "/about", label: "About" },
     { to: "/involve", label: "Involve" },
-    { to: "/gallery", label: "Gallery" },
+    { to: "/gallery", label: "Past Events" },
   ];
 
   const isActive = (to: string) =>
